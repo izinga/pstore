@@ -24,7 +24,7 @@ var (
 
 // UserState keeps track of all usernames, passwords and information about users
 type UserState struct {
-	users             *db.HashMap // Hash map of users, with several different fields per user ("loggedin", "confirmed", "email" etc)
+	users             *db.JSONB // Hash map of users, with several different fields per user ("loggedin", "confirmed", "email" etc)
 	usernames         *db.Set     // A list of all usernames, for easy enumeration
 	unconfirmed       *db.Set     // A list of unconfirmed usernames, for easy enumeration
 	host              *db.Host    // A PostgreSQL database
